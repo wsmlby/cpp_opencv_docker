@@ -2,6 +2,7 @@ FROM nvidia/cuda:10.2-devel-ubuntu18.04
 RUN apt update
 RUN apt install -y libssl1.1 libssl-dev
 RUN apt install -y libgstreamer1.0-dev
+RUN apt install -y wget
 RUN cd /tmp/ && wget -O opencv.zip https://github.com/opencv/opencv/archive/4.4.0.zip 
 RUN cd /tmp/ && unzip opencv.zip
 RUN cd /tmp/opencv-4.4.0 && mkdir build && cd build && cmake ..
