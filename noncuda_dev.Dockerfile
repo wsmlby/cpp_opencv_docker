@@ -3,6 +3,14 @@ FROM rikorose/gcc-cmake:gcc-8
 RUN apt update
 RUN apt install -y libssl1.1 libssl-dev
 RUN apt install -y libgstreamer1.0-dev
+RUN apt-get install \
+    libavutil-dev \
+    libavcodec-dev \
+    libavfilter-dev \
+    libavformat-dev \
+    libavdevice-dev \
+    pkg-config \
+    -y
 RUN cd /tmp/ && wget -O opencv.zip https://github.com/opencv/opencv/archive/4.4.0.zip 
 RUN cd /tmp/ && unzip opencv.zip
 RUN cd /tmp/opencv-4.4.0 && mkdir build && cd build && cmake ..

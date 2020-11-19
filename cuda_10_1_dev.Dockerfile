@@ -16,6 +16,14 @@ RUN wget https://github.com/Kitware/CMake/releases/download/v3.18.4/cmake-3.18.4
       && rm /tmp/cmake-install.sh
 
 ENV PATH="/usr/bin/cmake/bin:${PATH}"
+RUN apt-get install \
+    libavutil-dev \
+    libavcodec-dev \
+    libavfilter-dev \
+    libavformat-dev \
+    libavdevice-dev \
+    pkg-config \
+    -y
 RUN cd /tmp/ && wget -O opencv.zip https://github.com/opencv/opencv/archive/4.4.0.zip
 RUN cd /tmp/ && unzip opencv.zip
 RUN cd /tmp/opencv-4.4.0 && mkdir build && cd build && cmake ..
