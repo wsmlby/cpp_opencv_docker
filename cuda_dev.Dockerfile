@@ -31,3 +31,6 @@ RUN cd /tmp/opencv-4.4.0/build && cmake --build .
 RUN cd /tmp/opencv-4.4.0/build && make install
 RUN cd /tmp/ && rm -rf opencv-4.4.0 && rm opencv.zip
 RUN apt install -y git
+RUN apt install -y libgomp1
+RUN apt install -y libgomp1
+RUN apt install -y libprotobuf-dev protobuf-compiler
