@@ -34,3 +34,4 @@ RUN apt install -y git
 RUN apt install -y libgomp1
 RUN apt install -y libgomp1
 RUN apt install -y libprotobuf-dev protobuf-compiler
+RUN apt install -y libpython3-dev
